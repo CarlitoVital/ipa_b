@@ -13,7 +13,7 @@ strapi is only the backend from the whole project, to run the whole project you 
 
 ```
 
-
+### Standard Read.me from strapi
 
 # 🚀 Getting started with Strapi
 
