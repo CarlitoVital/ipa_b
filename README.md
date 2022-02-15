@@ -1,3 +1,20 @@
+## Project setup
+```
+write "npm install" or "npm i" in the terminal
+with this command all necessary node modules will be installed
+
+```
+
+### test Project of functionality
+```
+write "npm run develop" in the terminal. Now you should see under the project under this link http://localhost:8080/ in the browser
+under http://localhost:8080/admin you can excess to project with the admin e-mail and password
+strapi is only the backend from the whole project, to run the whole project you also need the Vue JS frontend
+
+```
+
+
+
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
