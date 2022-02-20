@@ -22,7 +22,8 @@
       "type": "richtext"
     },
     "clicks": {
-      "type": "integer"
+      "type": "integer",
+      "default": 1
     },
     "category_id": {
       "type": "relation",
