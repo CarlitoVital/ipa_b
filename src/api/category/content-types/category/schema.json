@@ -17,10 +17,6 @@
     },
     "icon": {
       "type": "string"
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "name"
     }
   }
 }

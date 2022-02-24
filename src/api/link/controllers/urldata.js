@@ -1,19 +1,26 @@
 const axios = require("axios");
 
+// request for html
 async function getUrlData(url) {
   try {
+    // wait for data
     const response = await axios.get(url);
 
+    // response into array
     const data = response.data;
 
+    // search for title
     const title = data.match(/<meta property="og:title" content="(.*?)"/);
 
+    // search for description
     const description = data.match(
       /<meta name="[dD]escription" content="(.*?)"/
     );
 
+    // search for image url
     const image = data.match(/<meta property="og:image" content="(.*?)"/);
 
+    // return filtered data
     return {
       status: "success",
       data: {

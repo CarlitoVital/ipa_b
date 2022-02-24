@@ -1,74 +1,142 @@
-## Project setup
+<div id="top"></div>
+
+<br />
+<div align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="src/assets/project_logo/ipa_projekt_logo.svg" alt="Logo" width="80" height="80">
+  </a>
+
+<h3 align="center">IPA Linkpinnwand-Webseite</h3>
+
+<p>Strapi<br />
+Backend des Gesamtprojektes
+</p>
+
+  <p align="center">
+    Projekt Beschreibung
+    <br />
+    Die Webseite soll für die Sammlung nützlicher und interessanter Links sein. (Z.B. Tutorials, Infos, Best Practices usw.)
+    Für jeden Link der eingeben wird der Titel, die Beschreibung und ein Bild automatisch abgefragt und gespeichert.
+  </p>
+</div>
+
+<details>
+  <summary>Inhaltsverzeichnis</summary>
+  <ol>
+    <li>
+      <a href="#projekt-setup">Projekt Setup</a>
+    </li>
+    <li>
+      <a href="#erstellt-mit">Erstellt mit</a>
+    </li>
+    <li>
+      <a href="#projekt-setup">Projektaufbau</a>
+      <ul>
+        <li><a href="#home-seite">Home-Seite</a></li>
+        <li><a href="#info-Seite">Info-Seite</a></li>
+        <li><a href="#detail-seite">Detail-Seite</a></li>
+        <li><a href="#erstell-seite">Erstell-Seite</a></li>
+        <li><a href="#editier-seite">Editier-Seite</a></li>
+        <li><a href="#impressum-seite">Impressum-Seite</a></li>
+        <li><a href="#komponenten">Komponenten</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#version">Version</a>
+    </li>
+    <li>
+      <a href="#updates">Updates</a>
+    </li>
+          <ul>
+        <li><a href="#version-1.0">Version 1.0</a></li>
+        <li><a href="#version-2.0">Version 2.0</a></li>
+        <li><a href="#version-3.0">Version 3.0</a></li>
+        <li><a href="#version-4.0">Version 4.0</a></li>
+        <li><a href="#version-5.0">Version 5.0</a></li>
+        <li><a href="#version-5.0">Version 6.0</a></li>
+      </ul>
+  </ol>
+</details>
+
+## Projekt Setup
+
+Alle Befehle sind ebenfalls mit yarn möglich.
+
+Mit dem unten stehenden Befehl werden alle notwendigen Node JS Module installiert.
+
+- npm
+
+  ```sh
+  npm i
+  ```
+
+  oder
+
+- npm
+
+  ```sh
+  npm install
+  ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Test Funktionalität
+
+Projekt laufen lassen
+
+- npm
+
+  ```sh
+  npm run develop
+  ```
+
+Nun sollte das Projekt im Browser zu sehen sein.
+
+```sh
+http://localhost:8080/admin
 ```
-write "npm install" or "npm i" in the terminal
-with this command all necessary node modules will be installed
 
-```
+Es kann auch ein andere Port sein.
 
-### test Project of functionality
-```
-write "npm run develop" in the terminal. Now you should see under the project under this link http://localhost:8080/ in the browser
-under http://localhost:8080/admin you can excess to project with the admin e-mail and password
-strapi is only the backend from the whole project, to run the whole project you also need the Vue JS frontend
+Vergessen Sie nicht, dass auch das Frontend (Vue JS) welches zu diesem Projekt gehört laufen sollte. Sonst sehen sie lediglich das Backend.
 
-```
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### Standard Read.me from strapi
+## Erstellt mit
 
-# 🚀 Getting started with Strapi
+- [Strapi](https://strapi.io/)
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### `develop`
+<!-- GETTING STARTED -->
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
+## Projekt Aufbau
 
-```
-npm run develop
-# or
-yarn develop
-```
+### Tabellen
 
-### `start`
+Im Strapi Content-Type Builder sind zwei neuen Tabellen, Category und Link.
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
+- Category
 
-```
-npm run start
-# or
-yarn start
-```
+  - name (Name der Kategorie)
+  - icon (Klasse für Icon Font)
 
-### `build`
+- Link
+  - url (URL)
+  - title (Titel)
+  - description (Beschreibung)
+  - clicks (Anzahl Klicks)
+  - image (Bild Link)
+  - category_id (Fremdschlüssel für zugewiesene Kategorie)
 
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
+### API
 
-```
-npm run build
-# or
-yarn build
-```
+Unter Settings, Roles, Public, Permissions sind die API Berechtigungen definiert. Für Link sind alle aktiviert, für Category nur die beiden GET.
 
-## ⚙️ Deployment
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
+### Auto Abfrage
 
-## 📚 Learn more
+Die automatische Abfrage ist im Verzeichnis unter src/api/link/controllers/urldata.js zu finden.
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+<p align="right">(<a href="#top">back to top</a>)</p>
