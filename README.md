@@ -32,29 +32,11 @@ Backend des Gesamtprojektes
     <li>
       <a href="#projekt-setup">Projektaufbau</a>
       <ul>
-        <li><a href="#home-seite">Home-Seite</a></li>
-        <li><a href="#info-Seite">Info-Seite</a></li>
-        <li><a href="#detail-seite">Detail-Seite</a></li>
-        <li><a href="#erstell-seite">Erstell-Seite</a></li>
-        <li><a href="#editier-seite">Editier-Seite</a></li>
-        <li><a href="#impressum-seite">Impressum-Seite</a></li>
-        <li><a href="#komponenten">Komponenten</a></li>
+        <li><a href="#tabellen">Tabellen</a></li>
+        <li><a href="#api">API</a></li>
+        <li><a href="#auto-abfrage">Auto Abfrage</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#version">Version</a>
-    </li>
-    <li>
-      <a href="#updates">Updates</a>
-    </li>
-          <ul>
-        <li><a href="#version-1.0">Version 1.0</a></li>
-        <li><a href="#version-2.0">Version 2.0</a></li>
-        <li><a href="#version-3.0">Version 3.0</a></li>
-        <li><a href="#version-4.0">Version 4.0</a></li>
-        <li><a href="#version-5.0">Version 5.0</a></li>
-        <li><a href="#version-5.0">Version 6.0</a></li>
-      </ul>
   </ol>
 </details>
 
